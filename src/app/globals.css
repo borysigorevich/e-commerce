@@ -72,6 +72,6 @@
     }
 
     html, body {
-      @apply h-full;
+      min-height: 100vh;
     }
   }
