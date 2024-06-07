@@ -10,7 +10,9 @@
 		"format": "prettier \"**/*.{ts,tsx,mjs,js,jsx,json,md}\" --check --write"
 	},
 	"dependencies": {
+		"@kinde-oss/kinde-auth-nextjs": "^2.2.13",
 		"@radix-ui/react-icons": "^1.3.0",
+		"@radix-ui/react-slot": "^1.0.2",
 		"class-variance-authority": "^0.7.0",
 		"clsx": "^2.1.1",
 		"lucide-react": "^0.378.0",

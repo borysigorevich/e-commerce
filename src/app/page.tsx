@@ -1,12 +1,14 @@
 import { MaxWidthWrapper } from '@/components/MaxWidthWrapper';
-import { Check } from 'lucide-react';
+import { Phone } from '@/components/Phone';
+import { Check, Star } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Home() {
 	return (
 		<main className="bg-slate-50 min-h-full">
 			<MaxWidthWrapper
 				className={
-					'pb-24 pt-10 lg:grid lg:grid-cols-3 sm:pb-32 lg:gap-x-0 xl:gap-x-8 lg:pt-24 lx:pt-32 lg:pb-52'
+					'pb-24 pt-10 lg:grid lg:grid-cols-3 sm:pb-32 lg:gap-x-0 xl:gap-x-8 lg:pt-24 lx:pt-32 lg:pb-52 overflow-hidden'
 				}
 			>
 				<div className={'col-span-2 px-6 lg:px-0 lg:pt-4'}>
@@ -16,7 +18,13 @@ export default function Home() {
 						}
 					>
 						<div className={'absolute w-28 left-0 -top-20 hidden lg:block'}>
-							<img src="/snake-1.png" alt="" className={'h-full'} />
+							<Image
+								src="/snake-1.png"
+								alt=""
+								width={112}
+								height={112}
+								className={'h-full'}
+							/>
 						</div>
 
 						<h1
@@ -110,7 +118,74 @@ export default function Home() {
 									}
 								/>
 							</div>
+
+							<div
+								className={
+									'flex flex-col items-center justify-between sm:items-start'
+								}
+							>
+								<div className={'flex gap-0.5'}>
+									<Star
+										className={
+											'h-4 w-4 text-green-600 fill-green-600'
+										}
+									/>
+									<Star
+										className={
+											'h-4 w-4 text-green-600 fill-green-600'
+										}
+									/>
+									<Star
+										className={
+											'h-4 w-4 text-green-600 fill-green-600'
+										}
+									/>
+									<Star
+										className={
+											'h-4 w-4 text-green-600 fill-green-600'
+										}
+									/>
+									<Star
+										className={
+											'h-4 w-4 text-green-600 fill-green-600'
+										}
+									/>
+								</div>
+
+								<p>
+									<span className={'font-semibold'}>1250</span>
+									happy customers
+								</p>
+							</div>
 						</div>
+					</div>
+				</div>
+
+				<div
+					className={
+						'col-span-full lg:col-span-1 w-full flex justify-center px-8 sm:px-16 md:px-0 mt-32 lg:mt-20 h-fit'
+					}
+				>
+					<div className={'relative md:max-w-xl'}>
+						<Image
+							src="/your-image.png"
+							alt=""
+							width={160}
+							height={160}
+							className={
+								'absolute w-40 lg:w-52 left-56 -top-20 hidden sm:block lg:hidden xl:block select-none'
+							}
+						/>
+
+						<Image
+							src={'/line.png'}
+							alt={''}
+							width={80}
+							height={80}
+							className={'absolute w-20 -left-6 -bottom-6 select-none'}
+						/>
+
+						<Phone className={'w-64'} imgSrc={'/testimonials/1.jpg'} />
 					</div>
 				</div>
 			</MaxWidthWrapper>
