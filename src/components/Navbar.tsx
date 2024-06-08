@@ -1,14 +1,14 @@
 import { MaxWidthWrapper } from '@/components/MaxWidthWrapper';
 import { buttonVariants } from '@/components/ui/button';
-import {getKindeServerSession} from "@kinde-oss/kinde-auth-nextjs/server";
+import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 
 export const Navbar = async () => {
-	const {getUser} = getKindeServerSession()
-	const user = await getUser()
-	const isAdmin = user?.email === process.env.ADMIN_EMAIL
+	const { getUser } = getKindeServerSession();
+	const user = await getUser();
+	const isAdmin = user?.email === process.env.ADMIN_EMAIL;
 
 	return (
 		<nav
